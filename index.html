@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a Data Scientist and Machine Learning Engineer specializing in AI, Big Data, and innovative technological solutions">
+    <meta name="keywords" content="Data Science, Machine Learning, AI, Python, Big Data, Portfolio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Mohamed Mahmoud Ali - Data Scientist & Machine Learning Engineer">
+    <meta property="og:description" content="Portfolio showcasing innovative technological solutions and data-driven projects">
+    <meta property="og:image" content="path/to/your/image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourdomain.com/">
+    <meta name="twitter:title" content="Mohamed Mahmoud Ali - Data Scientist & Machine Learning Engineer">
+    <meta name="twitter:description" content="Portfolio showcasing innovative technological solutions and data-driven projects">
+    <meta name="twitter:image" content="path/to/your/image.jpg">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Modern color palette and design */
+        :root {
+            /* Light Mode Colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f4f6f9;
+            --text-primary: #333333;
+            --text-secondary: #0077b6;
+            --primary-color: #0077b6;
+            --secondary-color: #00b4d8;
+            --accent-color: #90e0ef;
+            --card-bg: white;
+            --card-shadow: rgba(50,50,93,.1);
+        }
+
+        /* Dark Mode Colors */
+        :root.dark-mode {
+            --bg-primary: #121212;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #4db8ff;
+            --primary-color: #4db8ff;
+            --secondary-color: #1e88e5;
+            --accent-color: #64b5f6;
+            --card-bg: #1f1f1f;
+            --card-shadow: rgba(255,255,255,0.05);
+        }
+
+        /* Dark Mode Transition */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark Mode Theme Styles */
+        body.dark-mode {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            border: 2px solid rgba(0,119,182,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .theme-toggle:hover {
+            background: rgba(0,119,182,0.1);
+            transform: scale(1.1) rotate(15deg);
+        }
+
+        .theme-toggle i {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .theme-toggle .fa-sun {
+            color: #ffc107;
+            position: absolute;
+            opacity: 0;
+            transform: rotate(-180deg);
+        }
+
+        .theme-toggle .fa-moon {
+            color: #6c757d;
+            position: absolute;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        body.dark-mode .theme-toggle .fa-sun {
+            opacity: 1;
+            transform: rotate(0);
+        }
+
+        body.dark-mode .theme-toggle .fa-moon {
+            opacity: 0;
+            transform: rotate(180deg);
+        }
+
+        /* Dark Mode Specific Adjustments */
+        body.dark-mode section {
+            background-color: var(--bg-secondary);
+        }
+
+        body.dark-mode .skill-category,
+        body.dark-mode .project,
+        body.dark-mode .timeline-content {
+            background-color: var(--card-bg) !important;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 15px 35px var(--card-shadow);
+            color: var(--text-primary);
+        }
+
+        body.dark-mode h2 {
+            color: var(--text-secondary);
+        }
+
+        body.dark-mode .skill-tag {
+            background-color: rgba(77,184,255,0.2);
+            color: var(--text-primary);
+            border: 1px solid rgba(77,184,255,0.3);
+        }
+
+        body.dark-mode .skill-tag:hover {
+            background-color: rgba(30,136,229,0.3);
+        }
+
+        body.dark-mode a {
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        body.dark-mode a:hover {
+            color: var(--primary-color);
+        }
+
+        body.dark-mode .project-link a {
+            color: var(--text-secondary);
+        }
+
+        body.dark-mode .project-link a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Modern color palette and design */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 800px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+
+        .header-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .header-title h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .header-title .typed-cursor {
+            color: var(--primary-color);
+            font-size: 3rem;
+        }
+
+        .header-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .header-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .header-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .header-cta .btn-primary {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .header-cta .btn-secondary {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .header-cta a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            .header-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .header-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .header-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-cta a {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title h1 {
+                font-size: 2rem;
+            }
+
+            .header-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        .projects {
+            background-color: var(--bg-secondary);
+            padding: 4rem 0;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .projects h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .project {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px var(--card-shadow);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 1px solid rgba(0,119,182,0.1);
+            perspective: 1000px;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-content p {
+            color: #6c757d;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-link .project-icon {
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-15px) rotateX(10deg);
+            box-shadow: 0 25px 50px rgba(50,50,93,.2), 0 10px 25px rgba(0,0,0,.1);
+        }
+
+        .project:hover .project-link {
+            background-color: var(--primary-color);
+        }
+
+        .project:hover .project-link a,
+        .project:hover .project-link .project-icon {
+            color: white;
+        }
+
+        .project:hover .project-content h3 {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .project-container {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+
+            .projects h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .contact {
+            background-color: var(--bg-primary);
+            padding: 3rem 0;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact input, 
+        .contact textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .contact button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        #skills {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-secondary) 100%);
+            padding: 4rem 0;
+        }
+
+        #skills h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        #skills h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+
+        #skills .skills-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        #skills .skill-category {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px var(--card-shadow);
+            width: calc(33.333% - 2rem);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #skills .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(50,50,93,.15), 0 8px 20px rgba(0,0,0,.1);
+        }
+
+        #skills .skill-category h3 {
+            display: flex;
+            align-items: center;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        #skills .skill-category h3 i {
+            margin-right: 1rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        #skills .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        #skills .skill-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        #skills .skill-tag i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        #skills .skill-tag:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+            #skills .skill-category {
+                width: calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #skills .skill-category {
+                width: 100%;
+            }
+
+            #skills h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .experience {
+            background-color: var(--bg-secondary);
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .experience h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .experience h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-container.left {
+            left: 0;
+        }
+
+        .timeline-container.right {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            background: var(--card-bg);
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px var(--card-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background: var(--card-bg);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-container.left::after {
+            right: -12px;
+        }
+
+        .timeline-container.right::after {
+            left: -12px;
+        }
+
+        .timeline-container.left .timeline-content {
+            margin-right: 40px;
+        }
+
+        .timeline-container.right .timeline-content {
+            margin-left: 40px;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+        }
+
+        .timeline-content .job-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 992px) {
+            .timeline::before {
+                left: 40px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 80px;
+                padding-right: 25px;
+            }
+
+            .timeline-container.right {
+                left: 0;
+            }
+
+            .timeline-container.left::after,
+            .timeline-container.right::after {
+                left: 18px;
+            }
+
+            .timeline-container.left .timeline-content,
+            .timeline-container.right .timeline-content {
+                margin: 0 0 0 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .experience h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .projects .view-all-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            padding: 0 2rem;
+        }
+
+        .show-more {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(0,119,182,0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .show-more::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .show-more:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,119,182,0.3);
+        }
+
+        .show-more:hover::before {
+            left: 100%;
+        }
+
+        .show-more i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .show-more:hover i {
+            transform: translateX(5px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Smooth scroll for better UX */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Lazy load and image optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: opacity 0.3s ease;
+        }
+
+        img[data-src] {
+            opacity: 0;
+        }
+
+        img.lazy-loaded {
+            opacity: 1;
+        }
+
+        .professional-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .professional-highlight {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px var(--card-shadow);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,119,182,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .professional-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .professional-highlight:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(50,50,93,.15), 0 8px 20px rgba(0,0,0,.1);
+        }
+
+        .professional-highlight:hover::before {
+            transform: scaleX(1);
+        }
+
+        .professional-highlight h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .professional-highlight h3 i {
+            color: var(--primary-color);
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .professional-highlight:hover h3 i {
+            transform: rotate(15deg);
+        }
+
+        .professional-highlight p {
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .professional-highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .professional-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #blog {
+            background-color: var(--bg-secondary);
+            padding: 4rem 0;
+        }
+
+        #blog h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        #blog h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .blog-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px var(--card-shadow);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 1px solid rgba(0,119,182,0.1);
+        }
+
+        .blog-card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card-content p {
+            color: #6c757d;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-card-footer .blog-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .blog-card-footer .blog-read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card-footer .blog-read-more i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-15px) rotateX(10deg);
+            box-shadow: 0 25px 50px rgba(50,50,93,.2), 0 10px 25px rgba(0,0,0,.1);
+        }
+
+        .blog-card:hover .blog-card-footer {
+            background-color: var(--primary-color);
+        }
+
+        .blog-card:hover .blog-card-footer .blog-read-more,
+        .blog-card:hover .blog-card-footer .blog-read-more i {
+            color: white;
+        }
+
+        .blog-card:hover .blog-card-content h3 {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Mohamed Mahmoud Ali</h1>
+                <p class="typed-cursor">Big Data & AI Engineer | Kaggle Master</p>
+            </div>
+            <div class="header-subtitle">
+                <!-- <p>
+                    As an accomplished Big Data and AI Engineer with a strong foundation in computer science, I specialize in creating and deploying scalable data solutions and AI models. My passion lies in extracting meaningful insights from vast datasets, pushing the boundaries of AI, and driving innovation in machine learning.
+                </p> -->
+            </div>
+            <div class="header-cta">
+                <a href="#about" class="btn-primary">About</a>
+                <a href="#skills" class="btn-secondary">Skills</a>
+                <a href="#experience" class="btn-primary">
+                  Experience
+                  <i class="fas fa-code"></i>
+              </a>
+                <a href="#projects" class="btn-primary">
+                  Projects
+                  <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#blog" class="btn-primary">
+                Blog & Insights
+                <i class="fas fa-chart-line"></i>
+            </a>
+              <a href="#contact" class="btn-secondary">
+                  Contact
+                  <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+      <h2>About Me</h2>
+      <p>
+          As an accomplished Big Data and AI Engineer with a strong foundation in computer science, I specialize in creating and deploying scalable data solutions and AI models. My passion lies in extracting meaningful insights from vast datasets, pushing the boundaries of AI, and driving innovation in machine learning.
+
+          With experience spanning industries like healthcare, education, and software development, I leverage my expertise in tools such as Python, Hadoop, PySpark, and Apache NiFi, as well as data visualization platforms like Power BI and Tableau. Currently pursuing a Master's degree in Computer Science, I strive to stay at the forefront of AI and data science.
+      </p>
+
+      <div class="professional-highlights">
+          <div class="professional-highlight">
+              <h3>
+                  <i class="fas fa-database"></i>
+                  Big Data Engineer
+              </h3>
+              <p>
+                  Master's degree candidate specializing in computer science with a focus on Big Data and AI applications. Expertise in distributed computing, data processing, and scalable infrastructure solutions.
+              </p>
+          </div>
+
+          <div class="professional-highlight">
+              <h3>
+                  <i class="fas fa-brain"></i>
+                  AI Engineer
+              </h3>
+              <p>
+                  Specializing in building and deploying AI models for complex real-world problems. Focus on predictive analytics, deep learning techniques, and innovative machine learning solutions.
+              </p>
+          </div>
+
+          <div class="professional-highlight">
+              <h3>
+                  <i class="fas fa-chart-line"></i>
+                  Data Scientist
+              </h3>
+              <p>
+                  Expert in data analysis and machine learning, delivering actionable insights from large datasets. Proficient in Python, TensorFlow, and advanced algorithmic approaches to data interpretation.
+              </p>
+          </div>
+      </div>
+  </section>
+
+
+    <section id="skills" class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-categories">
+            <div class="skill-category">
+                <h3>
+                    <i class="fas fa-code"></i>
+                    Programming Languages
+                </h3>
+                <div class="skill-list">
+                    <div class="skill-tag">
+                        <i class="fab fa-python"></i>
+                        Python
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fab fa-java"></i>
+                        Java
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-terminal"></i>
+                        C++
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-database"></i>
+                        SQL
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-chart-line"></i>
+                        R
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>
+                    <i class="fas fa-brain"></i>
+                    Machine Learning & AI
+                </h3>
+                <div class="skill-list">
+                    <div class="skill-tag">
+                        <i class="fas fa-project-diagram"></i>
+                        TensorFlow
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-network-wired"></i>
+                        PyTorch
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-chart-pie"></i>
+                        Scikit-learn
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-brain"></i>
+                        Keras
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>
+                    <i class="fas fa-server"></i>
+                    Big Data & Cloud
+                </h3>
+                <div class="skill-list">
+                    <div class="skill-tag">
+                        <i class="fab fa-aws"></i>
+                        AWS
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-database"></i>
+                        Apache Spark
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fab fa-docker"></i>
+                        Docker
+                    </div>
+                    <div class="skill-tag">
+                        <i class="fas fa-cloud"></i>
+                        Kubernetes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>Big Data & AI Engineer</h3>
+                    <p class="job-title">Fingerprint Consultancy | May 2023 - Present</p>
+                    <p>Delivering scalable solutions for Big Data and AI projects using tools like Cloudera, Hadoop, and PySpark.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>AI Engineer</h3>
+                    <p class="job-title">Instant Software Solutions | Aug 2023 - Present</p>
+                    <p>Part-time role focusing on deploying AI models and analyzing data for actionable insights.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+              <div class="timeline-content">
+                  <h3>AI Engineer</h3>
+                  <p class="job-title">MEC Academy | September 2023 – Present</p>
+                  <p>Developing and implementing AI-driven educational technologies.
+                    Designing machine learning models to enhance learning experiences.
+                  </p>
+              </div>
+          </div>
+
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>Data Scientist</h3>
+                    <p class="job-title">GOMYCODE | Apr 2023 - Present</p>
+                    <p>Developed machine learning models and deep learning solutions to solve complex data problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <div class="project-content">
+                    <h3>COVID-19 Protein Interactions</h3>
+                    <p>Developed a cutting-edge web application using Recurrent Neural Networks to predict protein-protein interactions with 99.58% accuracy.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://cppi.onrender.com" target="_blank">Explore Project</a>
+                    <i class="fas fa-arrow-right project-icon"></i>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <h3>ASL Alphabet Recognition</h3>
+                    <p>Advanced machine learning model using VGG16 and ResNet50 for American Sign Language letter recognition, achieving 99% accuracy.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/Thesnak/ASL-using-VGG16-ResNet50" target="_blank">Explore Project</a>
+                    <i class="fas fa-arrow-right project-icon"></i>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <h3>Biological CLI Interpreter</h3>
+                    <p>Powerful command-line tool for comprehensive biological sequence analysis, providing researchers with advanced computational capabilities.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/Thesnak/Biological-Command-Line-Interpreter" target="_blank">Explore Project</a>
+                    <i class="fas fa-arrow-right project-icon"></i>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <h3>Graphics Optimization Tool</h3>
+                    <p>Innovative drawing application utilizing advanced optimization algorithms to enhance graphical rendering and user interaction.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/Thesnak/Graphics-Project" target="_blank">Explore Project</a>
+                    <i class="fas fa-arrow-right project-icon"></i>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <h3>Bioinformatics Web Server</h3>
+                    <p>Comprehensive web platform integrating advanced bioinformatics functions for data analysis and research exploration.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://bio-stock.000webhostapp.com" target="_blank">Explore Project</a>
+                    <i class="fas fa-arrow-right project-icon"></i>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <h3>Predictive Maintenance Model</h3>
+                    <p>AI-driven solution for predictive maintenance, leveraging machine learning to forecast and prevent potential machinery failures.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/Thesnak/Maintenance-Predictor" target="_blank">Explore Project</a>
+                    <i class="fas fa-arrow-right project-icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-container">
+        <a href="https://github.com/Thesnak" class="show-more" target="_blank">
+            View All Projects 
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+  
+  <section id="blog" class="container">
+        <h2>Blog & Insights</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-card-image">
+                    <img src="assets/images/blog/ai-ethics.jpg" alt="AI Ethics Exploration">
+                </div>
+                <div class="blog-card-content">
+                    <h3>The Ethical Dimensions of AI</h3>
+                    <p>Exploring the critical ethical considerations in modern artificial intelligence development and deployment.</p>
+                    <div class="blog-card-footer">
+                        <span class="blog-date">December 2023</span>
+                        <a href="https://medium.com/@mohamedmahmoudali/ai-ethics" target="_blank" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-card-image">
+                    <img src="assets/images/blog/big-data-trends.jpg" alt="Big Data Trends">
+                </div>
+                <div class="blog-card-content">
+                    <h3>Big Data Trends in 2024</h3>
+                    <p>Analyzing the emerging trends and technologies shaping the big data landscape in the coming year.</p>
+                    <div class="blog-card-footer">
+                        <span class="blog-date">November 2023</span>
+                        <a href="https://medium.com/@mohamedmahmoudali/big-data-trends" target="_blank" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-card-image">
+                    <img src="assets/images/blog/ml-deployment.jpg" alt="Machine Learning Deployment">
+                </div>
+                <div class="blog-card-content">
+                    <h3>Scaling Machine Learning Models</h3>
+                    <p>Best practices for deploying and scaling machine learning models in production environments.</p>
+                    <div class="blog-card-footer">
+                        <span class="blog-date">October 2023</span>
+                        <a href="https://medium.com/@mohamedmahmoudali/ml-deployment" target="_blank" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://linkedin.com/in/mohamed-thesnak" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Thesnak" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.kaggle.com/thesnak" target="_blank"><i class="fab fa-kaggle"></i></a>
+    </footer>
+    <button class="theme-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.min.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    // Project card click handler
+    const projects = document.querySelectorAll('.project');
+    projects.forEach(project => {
+        const link = project.querySelector('.project-link a');
+        if (link) {
+            project.addEventListener('click', function(e) {
+                // Prevent multiple triggers
+                if (e.target === link || e.target.closest('a')) return;
+                
+                // Open the project link
+                window.open(link.href, '_blank');
+            });
+        }
+    });
+});
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.querySelector('.theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Function to apply theme
+        function applyTheme(theme) {
+            if (theme === 'dark' || (theme === 'system' && prefersDarkScheme.matches)) {
+                document.body.classList.add('dark-mode');
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.documentElement.classList.remove('dark-mode');
+            }
+        }
+
+        // Initialize theme
+        function initTheme() {
+            const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+            applyTheme(savedTheme);
+        }
+
+        // Toggle theme
+        function toggleTheme() {
+            const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            localStorage.setItem('portfolio-theme', newTheme);
+            applyTheme(newTheme);
+        }
+
+        // Event listeners
+        themeToggle.addEventListener('click', toggleTheme);
+        prefersDarkScheme.addListener(() => initTheme());
+
+        // Initial theme setup
+        initTheme();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('lazy-loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Typewriter effect for professional title
+        if (document.querySelector('.header-content p')) {
+            new Typed('.header-content p', {
+                strings: [
+                    'Data Scientist | Machine Learning Engineer',
+                    'AI Innovator | Big Data Specialist',
+                    'Python Developer | Deep Learning Enthusiast'
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true
+            });
+        }
+    });
+    </script>
+</body>
+</html>
